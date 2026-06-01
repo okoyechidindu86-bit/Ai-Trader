@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get a laugh with random jokes from the internet</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Joke Display -->
+            <div class="joke-card">
+                <div class="joke-content">
+                    <p class="joke-type" id="jokeType">Click to get started!</p>
+                    <p class="joke-text" id="jokeText">Press the button below to generate a random joke...</p>
+                </div>
+                <div class="joke-actions">
+                    <button id="getJokeBtn" class="btn btn-primary">🎲 Get Random Joke</button>
+                    <button id="shareBtn" class="btn btn-secondary" disabled>📤 Share</button>
+                    <button id="copyBtn" class="btn btn-secondary" disabled>📋 Copy</button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <h3>Filter By Category:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All Jokes</button>
+                    <button class="filter-btn" data-category="general">General</button>
+                    <button class="filter-btn" data-category="programming">Programming</button>
+                    <button class="filter-btn" data-category="knock-knock">Knock-Knock</button>
+                </div>
+            </div>
+
+            <!-- Options -->
+            <div class="options">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="offensiveToggle" checked>
+                    <span>Include Offensive Jokes</span>
+                </label>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Jokes Generated:</span>
+                    <span class="stat-value" id="jokeCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Status:</span>
+                    <span class="stat-value" id="status">Ready</span>
+                </div>
+            </div>
+
+            <!-- History -->
+            <div class="history-section">
+                <h3>Joke History <span class="history-count" id="historyCount">(0)</span></h3>
+                <div class="history-controls">
+                    <button id="clearHistoryBtn" class="btn btn-small btn-danger">Clear History</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="placeholder">No jokes in history yet</p>
+                </div>
+            </div>
+
+            <!-- Favorite Jokes -->
+            <div class="favorites-section">
+                <h3>Favorite Jokes <span class="favorites-count" id="favoritesCount">(0)</span></h3>
+                <div class="favorites-controls">
+                    <button id="clearFavoritesBtn" class="btn btn-small btn-danger">Clear Favorites</button>
+                </div>
+                <div class="favorites-list" id="favoritesList">
+                    <p class="placeholder">No favorite jokes yet. Click ❤️ to save jokes!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <strong>JokeAPI</strong> | Made with ❤️ for laughs</p>
+            <p class="update-time">Last updated: <span id="lastUpdate">--:--:--</span></p>
+        </footer>
+    </div>
+
+    <script src="joke-app.js"></script>
+</body>
+</html>
